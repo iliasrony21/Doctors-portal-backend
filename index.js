@@ -67,6 +67,9 @@ async function run () {
       })
       res.send(services)
     })
+    app.get('/connect', (req, res) => {
+      res.send('this is connected')
+    })
 
     app.get('/booking', verifyJWT, async (req, res) => {
       const patientEmail = req.query.patientEmail
